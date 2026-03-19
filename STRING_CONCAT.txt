@@ -1,0 +1,11 @@
+DECLARE
+s1 varchar(30);
+s2 varchar(30);
+concat varchar(70);
+BEGIN
+s1:='&s1';
+s2:='&s2';
+concat:=s1||s2;
+dbms_output.put_line('concat string='||concat);
+END;
+/
