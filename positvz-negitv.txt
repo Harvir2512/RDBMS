@@ -1,0 +1,11 @@
+DECLARE
+n number;
+BEGIN
+n:=&n;
+ if n>0 then
+  dbms_output.put_line('number +ve='||n);
+ else
+  dbms_output.put_line('number +ve='||n);
+ END if;
+END;
+/

@@ -1,0 +1,35 @@
+DECLARE
+s1 int;
+s2 int;
+s3 int;
+s4 int;
+s5 int;
+tot int;
+per float;
+BEGIN
+s1:=&s1;
+s2:=&s2;
+s3:=&s3;
+s4:=&s4;
+s5:=&s5;
+tot:=s1+s2+s3+s4+s5;
+per:=tot/5;
+dbms_output.put_line('total marks='||tot);
+dbms_output.put_line('persantge='||per);
+
+ if per>35 and per<=50 then
+  dbms_output.put_line('pass=grade=d');
+ else if per>50 and per<=70 then
+  dbms_output.put_line('pass=grade=c');
+ else if per>70 and per<=87 then
+  dbms_output.put_line('pass=grade=b');
+ else if per>87 and per<100 then
+  dbms_output.put_line('pass=grade=a');
+ else
+  dbms_output.put_line('fill');
+END if;
+END if;
+END if;
+END if;
+END;
+/
