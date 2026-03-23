@@ -1,0 +1,14 @@
+DECLARE
+a int;
+b int;
+am int;
+hm int;
+BEGIN
+a:=&a;
+b:=&b;
+am:=a+b/2;
+hm:=a*b/a+b;
+dbms_output.put_line('arithmatic='||am);
+dbms_output.put_line('harmonic='||hm);
+END;
+/

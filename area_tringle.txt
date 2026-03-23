@@ -1,0 +1,11 @@
+DECLARE
+b int;
+h int;
+a int;
+BEGIN
+b:=&b;
+h:=&h;
+a:=1/2*b*h;
+dbms_output.put_line('area of tringle='||a);
+END;
+/

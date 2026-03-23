@@ -1,0 +1,12 @@
+DECLARE
+f int;
+c int;
+k int;
+BEGIN
+f:=&f;
+c:=0.5/9*f-32;
+k:=c+273.15;
+dbms_output.put_line('celsius='||c);
+dbms_output.put_line('kelvin='||k);
+END;
+/

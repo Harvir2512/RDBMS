@@ -1,0 +1,16 @@
+DECLARE
+u int;
+a int;
+t int;
+s int;
+v int;
+BEGIN
+u:=&u;
+a:=&a;
+t:=&t;
+v:=u+a*t;
+s:=u+a*t*t;
+dbms_output.put_line('volocity='||v);
+dbms_output.put_line('distanes='||s);
+END;
+/
