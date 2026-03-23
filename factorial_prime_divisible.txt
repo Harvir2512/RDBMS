@@ -1,0 +1,35 @@
+DECLARE
+n number(20);
+i int;
+fact number;
+j int;
+BEGIN  
+i:=1;
+fact:=1;
+n:=&n;
+if n mod 5 = 0 and n mod 7 = 0 then
+dbms_output.put_line('is divisible='||n);
+else
+dbms_output.put_line('is not divisible='||n);
+END if;
+  loop
+    fact:=fact*i;
+    i:=i+1;
+  EXIT WHEN i>n;
+END loop;
+dbms_output.put_line('factorial number='||fact);
+j:=2;
+ loop
+  if n mod j = 0 then
+    EXIT;
+  END if;
+  j:=j+1;
+  EXIT when j>n;
+ END loop;
+ if n=j then
+ dbms_output.put_line('number is prime');
+ else
+ dbms_output.put_line('number is not prime'); 
+END if;
+END;
+/

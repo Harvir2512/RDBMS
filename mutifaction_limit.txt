@@ -1,0 +1,16 @@
+DECLARE
+i int;
+ans int;
+n int;
+BEGIN
+i:=1;
+ans:=0;
+n:=&n;
+ loop
+  ans:=i*i;
+ EXIT when i>n;
+ i:=i+1;
+ dbms_output.put_line('mutifaction='||ans);
+ END loop;
+END;
+/

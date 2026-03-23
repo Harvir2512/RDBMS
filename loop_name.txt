@@ -1,0 +1,11 @@
+DECLARE
+i int;
+BEGIN
+i:=1;
+ LOOP
+  dbms_output.put_line('harvir');
+  i:=i+1;
+ EXIT WHEN i>5;
+ END LOOP;
+END;
+/
