@@ -1,0 +1,18 @@
+DECLARE
+    num int;
+    rem int;
+    rev int;
+BEGIN
+rev:=0;
+num:=&num;
+rem:=0;
+    WHILE num > 0 
+    LOOP
+        rem:=num mod 10;
+        rev:=rev*10+rem;
+        num:=TRUNC (num/10);
+    END LOOP;
+   dbms_output.put_line('reverse number='||rev);
+END;
+/
+

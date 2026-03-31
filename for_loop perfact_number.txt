@@ -1,0 +1,19 @@
+DECLARE
+n int;
+s int;
+BEGIN
+s:=0;
+n:=&n;
+ for i in 1..n-1
+ loop
+    if n mod i=0 then
+       s:=s+i;
+    END if;
+ END loop;
+ if n=s then
+  dbms_output.put_line('perfact number');
+ else
+  dbms_output.put_line('not perfact number');
+END if;
+END;
+/

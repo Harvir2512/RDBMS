@@ -1,0 +1,22 @@
+DECLARE
+    num int;
+    d int;
+    s int;
+    n int;
+BEGIN
+s:=0;
+num:=&num;
+n:=num;
+    WHILE num > 0 
+    LOOP
+        d:=num mod 10;
+        s:=s+d*d*d;
+        num:=TRUNC (num/10);
+    END LOOP;
+    if s=n then
+      dbms_output.put_line('number is amstrong');
+    else
+      dbms_output.put_line('number is not amstrong');
+    END if;
+END;
+/
