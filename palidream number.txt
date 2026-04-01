@@ -1,0 +1,21 @@
+DECLARE
+n int;
+n1 number;
+rev int:=0;
+rem int:=0;
+BEGIN
+n:=&n;
+n1:=n;
+while n>0 
+loop
+ rem:=n mod 10;
+ rev:=rev*10+rem;
+ n:=floor(n/10);
+END loop;
+ if n1=rev then
+  dbms_output.put_line('palidrame number');
+ else
+  dbms_output.put_line('not palidrame number');
+ END if;
+END;
+/
