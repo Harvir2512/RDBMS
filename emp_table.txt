@@ -1,0 +1,21 @@
+DECLARE
+eno int;
+ename varchar(13);
+salary int;
+addrs varchar(13);
+dept varchar(13);
+BEGIN
+eno:=&eno;
+ename:='&ename';
+salary:=&salary;
+addrs:='&addrs';
+dept:='&dept';
+
+insert into emp values(eno,ename,salary,addrs,dept);
+END;
+/
+CREATE TABLE emp(eno int primary key,
+ename varchar(13),
+salary int,
+addrs varchar(13),
+dept varchar(13));

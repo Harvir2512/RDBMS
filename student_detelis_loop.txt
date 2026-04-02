@@ -1,0 +1,14 @@
+DECLARE
+sno int;
+sname varchar(10);
+per float;
+BEGIN
+ for i in 1..3
+ loop
+   sno:=&sno;
+   sname:='&sname';
+   per:=&per;
+   insert into student values(sno,sname,per);
+ END loop;
+END;
+/
