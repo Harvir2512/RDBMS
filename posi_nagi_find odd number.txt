@@ -1,0 +1,20 @@
+DECLARE
+ n int;
+ n1 int;
+BEGIN
+n:=&n;
+n1:=&n1;
+ if n>0 and n1>0 then
+  dbms_output.put_line('positive');
+  for i in n..n1
+  loop
+    if i mod 2=1 then
+      dbms_output.put_line(i);
+    END if;
+  END loop;
+ else
+   dbms_output.put_line('number is nagitive');
+
+ END if;
+END;
+/
