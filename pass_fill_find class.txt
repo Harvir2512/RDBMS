@@ -1,0 +1,29 @@
+DECLARE
+sno int;
+sname char(10);
+per float;
+class varchar(5);
+BEGIN
+sno:=&sno;
+sname:='&sname';
+per:=&per;
+ if per>40 and per<=50 then
+   class:='pass';
+ else if per>50 and per<=60 then
+   class:='c';
+ else if per>60 and per<=70 then
+   class:='B';
+ else if per>70 and per<=80 then
+   class:='A';
+ else if per>80 and per<=100 then
+   class:='O';
+ else
+   class:='fill';
+END if;
+END if;
+END if;
+END if;
+END if;
+ insert into student values(sno,sname,per,class);
+END;
+/

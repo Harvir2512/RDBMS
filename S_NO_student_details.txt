@@ -1,0 +1,15 @@
+DECLARE
+s_no int;
+s_name char(10);
+s_per float;
+s_class varchar(5);
+BEGIN
+s_no:=&s_no;
+  
+  select sname,per,class into s_name,s_per,s_class from
+  student where s_no=sno;
+  dbms_output.put_line('student name='||s_name);
+  dbms_output.put_line('student parsantage='||s_per);
+  dbms_output.put_line('student class='||s_class);
+END;
+/
