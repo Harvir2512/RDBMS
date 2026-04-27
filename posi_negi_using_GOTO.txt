@@ -1,0 +1,15 @@
+DECLARE
+  num int;
+BEGIN
+ num:=&num;
+  if num > 0 then
+    GOTO pos;
+  else
+    GOTO neg;
+  END if;
+  <<pos>>
+     dbms_output.put_line('number is positive');
+  <<neg>>
+     dbms_output.put_line('number is negitive');
+END;
+/
