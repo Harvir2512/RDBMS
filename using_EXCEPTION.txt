@@ -1,0 +1,15 @@
+DECLARE
+  a int;
+  b int;
+  c int;
+BEGIN
+  a:=&a;
+  b:=&b;
+  c:=a/b;
+
+  dbms_output.put_line('additon='||c);
+EXCEPTION
+  WHEN ZERO_DIVIDE then
+      dbms_output.put_line('not allowed zero divied');
+END;
+/
