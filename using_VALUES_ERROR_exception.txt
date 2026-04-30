@@ -1,0 +1,14 @@
+DECLARE
+a number(2);
+b number(2);
+ans number(2);
+BEGIN
+a:=&a;
+b:=&b;
+ans:=a+b;
+dbms_output.put_line('addition='||ans);
+EXCEPTION
+  when VALUE_ERROR then
+    dbms_output.put_line('invilied values');
+END;
+/
