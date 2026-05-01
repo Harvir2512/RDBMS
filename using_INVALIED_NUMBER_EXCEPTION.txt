@@ -1,0 +1,25 @@
+DECLARE
+ u_sname varchar(20);
+ u_per float;
+BEGIN
+ 
+  select sname,per into u_sname,u_per from student where sno=1;
+ 
+  dbms_output.put_line('student name='||u_sname);
+  dbms_output.put_line('student per='||u_per);
+EXCEPTION
+  when TOO_MANY_ROWS then
+   dbms_output.put_line('kahi tari chuktay');
+  when others then
+   dbms_output.put_line('someting went wrong');
+END;
+/
+
+
+create teble student(sno int,
+sname varchar(20),
+per float);
+
+insert into student values(1,'harvir',56.12);
+insert into student values(2,'sandesh',86.00);
+insert into student values(3,'abhi',32.86);
