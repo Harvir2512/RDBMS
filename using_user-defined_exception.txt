@@ -1,0 +1,15 @@
+DECLARE
+ invalid_age EXCEPTION;
+ age int;
+BEGIN
+  age:=&age;
+  if age<18 then
+   RAISE invalid_age;
+  else
+   dbms_output.put_line('user is eligible for voting');
+  END if;
+EXCEPTION
+  when invalid_age then
+    dbms_output.put_line('user is too small value is voting');
+END;
+/

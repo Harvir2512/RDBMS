@@ -1,0 +1,15 @@
+DECLARE
+ rate int;
+ invalid_rate EXCEPTION;
+BEGIN
+ rate:=&rate;
+ if rate<=0 then
+  RAISE invalid_rate;
+ else
+  dbms_output.put_line('correct values');
+ END if;
+EXCEPTION
+  when invalid_rate then
+   dbms_output.put_line('wrong value');
+END;
+/
