@@ -1,0 +1,43 @@
+create table student(rollno int primary key,
+sname varchar(7),
+class varchar(5),
+timetable varchar(7),
+mobileno number(10));
+
+create table lab(lno int primary key,
+lname varchar(10),
+capacity number(3),
+equipment  char(10),
+rollno int references student(rollno));
+
+insert into student values(1,'harvir','Bca','9 to 12',22336655);
+
+insert into lab values(101,'mca_lab',35,'camputer',3);
+
+DECLARE
+ u_lno int;
+ r1 lab%ROWTYPE;
+ r2 student%ROWTYPE;
+ invalid_lab exception;
+ u_rollno int;
+BEGIN
+  
+    u_lno:=&u_lno;
+    select * into r1 from lab where lno=u_lno;
+     dbms_output.put_line('lab name='||r1.lname);
+     dbms_output.put_line('lab capacity='||r1.capacity);
+     dbms_output.put_line('lab equipment='||r1.equipment);
+     dbms_output.put_line('lab refernces='||r1.rollno);
+
+EXCEPTION
+   when invalid_lab then
+      dbms_output.put_line('do not aexist lab');
+      u_rollno:=&rollno;
+      select * into r2 from student where rollno=u_rollno;
+       dbms_output.put_line('student name='||r2.sname);
+       dbms_output.put_line('student class='||r2.class);
+       dbms_output.put_line('student timetable='||r2.timetable);
+       dbms_output.put_line('student mobileno='||r2.mobileno);
+
+END;
+/

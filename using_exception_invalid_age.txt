@@ -1,0 +1,15 @@
+DECLARE
+ not_cnt_for_vt exception;
+ age int;
+BEGIN
+ age:=&age;
+ if age>18 then
+   dbms_output.put_line('user is too eligbilty for voting');
+ else
+   raise not_cnt_for_vt;
+ END if;
+EXCEPTION
+  when not_cnt_for_vt then
+   dbms_output.put_line('user is too small voting');
+END;
+/
