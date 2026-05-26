@@ -1,0 +1,17 @@
+DECLARE
+ cursor c1 is select *from emp;
+ u_eno int;
+ u_ename varchar(10);
+ u_sal float;
+BEGIN
+  open c1;
+  loop
+   fetch c1 into u_eno,u_ename,u_sal;
+    EXIT WHEN c1%notfound;
+    dbms_output.put_line('emp number='||u_eno);
+    dbms_output.put_line('emp name='||u_ename);
+    dbms_output.put_line('emp sal='||u_sal);
+  END loop;
+  close c1;
+END;
+/

@@ -1,0 +1,12 @@
+declare
+ u_eno int; 
+begin
+ u_eno:=&u_eno;
+   delete from emp where eno=u_eno;
+    if sql%found then
+     dbms_output.put_line('recored deleted');
+    else
+     dbms_output.put_line('recored not found');
+   END if;
+END;
+/ 
