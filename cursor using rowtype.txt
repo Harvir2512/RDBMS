@@ -1,0 +1,18 @@
+DECLARE
+ u_per float;
+ cursor c1(u_per float)is select * from student where per<u_per;
+ r1 student%rowtype;
+
+BEGIN
+ u_per:=&u_per;
+    open c1(u_per);
+    loop
+    fetch c1 into r1;
+    exit when c1%NOTFOUND;
+    dbms_output.put_line('student number='||r1.sno);
+    dbms_output.put_line('student name='||r1.sname);
+    dbms_output.put_line('student persantge='||r1.per);
+    END loop;
+    close c1;
+END;
+/
