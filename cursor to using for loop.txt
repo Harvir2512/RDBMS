@@ -1,0 +1,13 @@
+DECLARE
+ cursor c1 is select * from emp;
+ r1 emp%rowtype;
+
+BEGIN
+ for r1 in c1
+ loop
+  dbms_output.put_line('emp number='||r1.eno);
+  dbms_output.put_line('emp ename='||r1.ename);
+  dbms_output.put_line('emp sal='||r1.sal);
+ END loop;
+END;
+/
