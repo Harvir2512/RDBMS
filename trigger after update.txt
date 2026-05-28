@@ -1,0 +1,8 @@
+create or replace trigger t1 after update
+on emp
+
+BEGIN
+ 
+  dbms_output.put_line('recored update');
+END;
+/

@@ -1,0 +1,8 @@
+create or replace trigger t1 after DELETE
+on emp
+
+BEGIN
+ dbms_output.put_line('RECORED DELETE');
+
+END;
+/

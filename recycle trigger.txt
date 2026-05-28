@@ -1,0 +1,13 @@
+create or replace trigger t1 before delete
+on emp for each row
+
+BEGIN
+ 
+  insert into Recycle values(:old.eno,:old.ename,:old.sal);
+  
+END;
+/
+
+create teble Recycle(eno int primary key,
+ename varchar(10),
+sal float);
