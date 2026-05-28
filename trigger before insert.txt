@@ -1,0 +1,11 @@
+create or replace trigger harvir before insert
+on emp for each row
+
+BEGIN
+ dbms_output.put_line('recored inserted');
+END;
+/
+
+create table emp(eno int primary key,
+ename varchar(10),
+sal float);
