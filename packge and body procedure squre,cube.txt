@@ -1,0 +1,23 @@
+create or replace package p1
+is
+ PROCEDURE squre(num in int,ans out int);
+ PROCEDURE cube(num in int,ans out int);
+END p1;
+/
+
+create or replace package body p1
+as
+  PROCEDURE squre(num in int,ans out int)
+ is
+ BEGIN
+  ans:=num*num;
+  
+  END squre;
+  
+  PROCEDURE cube(num in int,ans out int)
+is
+BEGIN
+  ans:=num*num*num;
+ END cube;
+END p1;
+/

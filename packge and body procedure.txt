@@ -1,0 +1,23 @@
+create or replace package p1
+is
+ PROCEDURE area_of_cricle(r in int,ans out int);
+ PROCEDURE area_of_rectangle(w in int,l in int,ans out int);
+END p1;
+/
+
+create or replace package body p1
+as
+  PROCEDURE area_of_cricle(r in int,ans out int)
+ is
+ BEGIN
+  ans:=3.14*r*r;
+  
+  END area_of_cricle;
+  
+  PROCEDURE area_of_rectangle(w in int,l in int,ans out int)
+is
+BEGIN
+  ans:=w*l;
+ END area_of_rectangle;
+END p1;
+/
