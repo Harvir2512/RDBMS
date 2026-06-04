@@ -1,0 +1,17 @@
+declare
+ num1 int;
+ quantity_out_of_range exception;
+begin
+ 
+ num1:=&num1;
+
+  if num1>50 and num1<200 then
+    dbms_output.put_line('range of quantity');
+  else
+    raise quantity_out_of_range;
+  end if;
+exception
+   when quantity_out_of_range then
+    dbms_output.put_line('quantity limit corse');
+end;
+/

@@ -1,0 +1,17 @@
+declare
+ num int;
+ invilid_rate_value exception;
+
+BEGIN
+ num:=&num;
+  
+  if num<=0 then
+    raise invilid_rate_value;
+  else
+   dbms_output.put_line('corret input');
+  end if;
+exception
+  when invilid_rate_value then
+    dbms_output.put_line('worng value');
+end;
+/
