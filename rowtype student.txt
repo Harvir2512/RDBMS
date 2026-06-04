@@ -1,0 +1,13 @@
+DECLARE
+ r1 student%rowtype;
+ u_sno int;
+ 
+BEGIN
+ 
+ u_sno:=&u_sno;
+  select sno,sname,per into r1 from student where sno=u_sno;
+    dbms_output.put_line('student number='||r1.sno);
+    dbms_output.put_line('student name='||r1.sname);
+    dbms_output.put_line('student per='||r1.per);
+END;
+/

@@ -1,0 +1,34 @@
+declare
+ u_sno student.sno%type;
+ u_sname student.sname%type;
+ u_per student.per%type;
+begin
+ u_sno:=&u_sno;
+  select sname,per into u_sname,u_per from student where sno=u_sno;
+  
+  if u_per>99 then
+    dbms_output.put_line('student number='||u_sno);
+    dbms_output.put_line('student name='||u_sname);
+    dbms_output.put_line('student per='||u_per);
+    dbms_output.put_line('greade=A');
+  else if u_per>70 then
+    dbms_output.put_line('student number='||u_sno);
+    dbms_output.put_line('student name='||u_sname);
+    dbms_output.put_line('student per='||u_per);
+    dbms_output.put_line('greade=B');
+  else if u_per>50 then
+    dbms_output.put_line('student number='||u_sno);
+    dbms_output.put_line('student name='||u_sname);
+    dbms_output.put_line('student per='||u_per);
+    dbms_output.put_line('greade=pass');
+  else
+    dbms_output.put_line('student number='||u_sno);
+    dbms_output.put_line('student name='||u_sname);
+    dbms_output.put_line('student per='||u_per);
+    dbms_output.put_line('greade=fill');
+
+  end if;
+  end if;
+  end if;
+end;
+/
